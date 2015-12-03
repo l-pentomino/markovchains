@@ -39,7 +39,7 @@ public class Chainme {
         if (arg.length == 2) iterations = Integer.parseInt(arg[1].trim());
 
         sayln(fileName);
-        File out = new File(fileName.split("\\.")[0] + "_out.txt");
+        File out = new File(fileName.split("\\.")[0] + "_generated.txt");
 
         try {
             if (!out.exists()) out.createNewFile();
