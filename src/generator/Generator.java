@@ -1,7 +1,7 @@
 package generator;
 import generator.Tokenizer.*;
 
-import static generator.Main.sayln;
+import static generator.Chainme.sayln;
 
 
 import java.io.File;

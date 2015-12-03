@@ -4,13 +4,11 @@
 package generator;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
-public class Main {
-    static String help = "Usage:\nMain\tf=<corpus-file-name> n=<ngram-size> i=<iterations>" +
+public class Chainme {
+    static String help = "Usage:\nChainme\tf=<corpus-file-name> n=<ngram-size> i=<iterations>" +
                                      "\n\thelp";
 
     public static void main(String[] args) throws Exception {
@@ -56,18 +54,11 @@ public class Main {
         Generator gen = new Generator(N, iterations, fileName);
 
         String text = gen.generateText();
-        sayln(text);
 
         if (pw != null) {
             pw.write(text);
             pw.close();
         }
-    }
-
-    static void test(int ngrams, int iters) {
-        String corpus = "corpus1.txt";
-        Generator gen = new Generator(ngrams, iters, corpus);
-        sayln(gen.generateText());
     }
 
     static void say(Object o) {
